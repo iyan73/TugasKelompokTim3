@@ -47,7 +47,7 @@ public class Kasir {
                 selectedProduct = keyboard.nextInt();
                 System.out.print("Masukkan jumlah barang:   ");
                 totalSelectedProduct = keyboard.nextInt();
-                System.out.println("cek:   "+ ids.contains(selectedProduct));
+//                System.out.println("cek:   "+ ids.contains(selectedProduct));
                 if (ids.contains(selectedProduct) == false){
                     ids.add(selectedProduct);
                     resultSelectedProduct = listProduct.get(selectedProduct - 1);
