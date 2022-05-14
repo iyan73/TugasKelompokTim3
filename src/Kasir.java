@@ -17,7 +17,7 @@ public class Kasir {
         Scanner keyboard = new Scanner(System.in);
         int selectedProduct;
         int totalSelectedProduct;
-        int totalAmount;
+        int totalAmount = 0;
         ArrayList<Integer> ids = new ArrayList<>();
         Product resultSelectedProduct;
         ArrayList<Cart> listSelectedProduct = new ArrayList<>();
@@ -80,12 +80,11 @@ public class Kasir {
 
                 chooseInputAgain = br.readLine();
                 if (chooseInputAgain.equalsIgnoreCase("t")) {
-                    totalAmount = 0;
                     System.out.println("******************** Nota Belanja ********************");
                     System.out.println("No" + ". " + "Nama Barang" + "     " + "Qty" + "     " + "Price" + "     " + "amount");
                     for (int i = 0; i <= listSelectedProduct.toArray().length - 1; i++ ){
                         System.out.println((i+1) + ". " + listSelectedProduct.get(i).name + "     " + listSelectedProduct.get(i).qty + "     " + listSelectedProduct.get(i).price + "     " + listSelectedProduct.get(i).qty * listSelectedProduct.get(i).price);
-                        totalAmount =+ (listSelectedProduct.get(i).qty * listSelectedProduct.get(i).price);
+                        totalAmount += (listSelectedProduct.get(i).qty * listSelectedProduct.get(i).price);
                     }
                     System.out.println("==================================================");
                     System.out.println("                                "+"Total : " + totalAmount);
